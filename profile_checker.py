@@ -12,7 +12,6 @@ def get_user_info():
         "graduated": graduated == "yes"
     }
 
-
 def print_info(user):
     print("\n--- User Information ---")
     print(f"Name            : {user['name']}")
@@ -22,7 +21,6 @@ def print_info(user):
     print(f"Graduated       : {'Yes' if user['graduated'] else 'No'}")
     print("------------------------\n")
 
-
 def evaluate_eligibility(user):
     if user['age'] < 25 and user['gpa'] >= 3.5 and user['graduated']:
         print("Congratulations! You are eligible for a scholarship.")
@@ -31,12 +29,9 @@ def evaluate_eligibility(user):
     else:
         print("Thank you for your interest. Please consider applying again later.")
 
-
 def main():
     user = get_user_info()
     print_info(user)
     evaluate_eligibility(user)
 
-
-if __name__ == "__main__":
-    main()
+main()
